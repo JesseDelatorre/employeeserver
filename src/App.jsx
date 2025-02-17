@@ -5,7 +5,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Welcome to the Store</h1>
+      <h1>Welcome Employees</h1>
     </>
   )
 }
