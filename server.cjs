@@ -1,6 +1,6 @@
 
 const employees = require('./employees.cjs');
-let idNumber = 5;
+let idNumber = 6;
 const express = require('express');
 
 const app = express();
@@ -15,6 +15,7 @@ app.use(express.static('dist'));
 
 app.get('/employees', (req, res) => {
   res.send(employees);
+  console.log(employees);
 });
 
 // app.get('/employees/:id', (req, res) => {
@@ -27,7 +28,7 @@ app.get('/employees', (req, res) => {
 // });
 
 app.post('/api/v1/employees', (req, res, next) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { name } = req.body
   if(!name) {
     const error = new Error("Name not provided");
